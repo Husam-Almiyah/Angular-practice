@@ -1,6 +1,6 @@
 <h2>Programming Books</h2>
-<ul>
+<ul class="flex flex-wrap justify-center">
     <ng-container  *ngFor="let book of books">
-        <app-book class="book" [book]="book"></app-book>
+        <app-book class="w-1/2 p-5 text-center" [book]="book"></app-book>
     </ng-container>
 </ul>

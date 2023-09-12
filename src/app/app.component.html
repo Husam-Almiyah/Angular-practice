@@ -1,3 +1,13 @@
-<!-- <app-books></app-books>
-<app-cart></app-cart> -->
-<router-outlet></router-outlet>
+<nav class="flex justify-between bg-blue-500 text-white p-4">
+    <div>
+        <a routerLink="/">Bookly</a>
+    </div>
+    <div>
+        <a class="mx-4" routerLink="/cart">My Cart</a>
+        <a class="mx-4" routerLink="/login">Login</a>
+        <a class="mx-4" routerLink="/register">Register</a>
+    </div>
+</nav>
+<div class="p-4 ">
+    <router-outlet></router-outlet>
+</div>

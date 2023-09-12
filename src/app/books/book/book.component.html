@@ -1,7 +1,9 @@
-<li>
-    <img [src]="book.image" [alt]="book.name" width="40px" />
-    <p class="title">{{ book.name | titlecase }} by {{ book.author | titlecase }}</p>
-    <p class="currency">price: {{ book.amount | currency }}</p>
-    <button *ngIf="!isInCart" (click)="addToCart()">Add to Cart</button>
-    <button *ngIf="isInCart" (click)="removeFromCart()">Remove from Cart</button>
+<li class="flex border rounded-xl h-60">
+    <img class="m-auto rounded-sm" [src]="book.image" [alt]="book.name" width="100" />
+    <div class="m-auto">
+        <p class="text-lg">{{ book.name | titlecase }} by {{ book.author | titlecase }}</p>
+        <p class="my-4">price: {{ book.amount | currency }}</p>
+        <button class="bg-yellow-400 rounded p-3" *ngIf="!isInCart" (click)="addToCart()">Add to Cart</button>
+        <button class="bg-yellow-400 rounded p-3" *ngIf="isInCart" (click)="removeFromCart()">Remove from Cart</button>
+    </div>
 </li>
